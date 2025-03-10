@@ -17,6 +17,10 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
+      # Add a step to create/verify the scope
+      - run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.npmzero }}" > ~/.npmrc
+          echo "@sapdev.eu:registry=https://registry.npmjs.org/" >> ~/.npmrc
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npmzero }}
