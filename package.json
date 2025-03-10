@@ -1,6 +1,6 @@
 {
   "name": "@sapdev.eu/adtstyler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool for ADT styling",
   "type": "module",
   "main": "./lib/Styler.mjs",
