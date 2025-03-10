@@ -1,0 +1,7 @@
+{
+    "version": "v1",
+    "supportedVersions": [
+        "org.eclipse.ui.themes_1.2.2600.v20241028-0713"
+    ],
+    "author" : "Attila Berencsi"
+}

@@ -1,0 +1,368 @@
+/*******************************************************************************
+ * Copyright (c) 2010, 2015 Andrea Guarinoni and others.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
+ * which accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
+ * Contributors:
+ *     Andrea Guarinoni <andrea.guarinoni.dev@outlook.com> - initial API and implementation
+ *     Stefan Winkler <stefan@winklerweb.net> - Bug 434189, 430848
+ *     Simon Scholz <simon.scholz@vogella.com> - Bug 431635
+ *     Fabio Zadrozny <fabiofz@gmail.com> - Bug 465148, 465711
+ *     Lars Vogel <Lars.Vogel@vogella.com> Bug 463652,466275
+ *******************************************************************************/
+
+/*******************************************************************************
+ * The following bugs are referred to in this style sheet
+ * 2.) Bug 419377 - Setting a property to 'inherit' is not supported
+ * 3.) Bug 430051 - Regression for CTabRendering when drawing bottom tabs
+ *******************************************************************************/
+
+
+/* ############################## Global Styles ############################## */
+
+Shell,
+Composite,
+ScrolledComposite,
+ExpandableComposite,
+Canvas,
+TabFolder,
+CLabel,
+Label,
+CoolBar,
+Sash,
+Group,
+RefactoringLocationControl,
+ChangeParametersControl,
+Link,
+FilteredTree,
+ProxyEntriesComposite,
+NonProxyHostsComposite,
+DelayedFilterCheckboxTree,
+Splitter,
+ScrolledPageContent,
+ViewForm,
+LaunchConfigurationFilteredTree,
+ContainerSelectionGroup,
+BrowseCatalogItem,
+EncodingSettings,
+ProgressMonitorPart,
+DocCommentOwnerComposite,
+NewServerComposite,
+NewManualServerComposite,
+ServerTypeComposite,
+FigureCanvas,
+DependenciesComposite,
+ListEditorComposite,
+WrappedPageBook,
+CompareStructureViewerSwitchingPane,
+CompareContentViewerSwitchingPane,
+QualifiedNameComponent,
+RefactoringStatusViewer,
+MessageLine,
+Button
+
+/* SWT-BUG: checkbox inner label font color is not accessible */
+,
+Composite>*,
+Composite>*>*,
+Group>StyledText {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+/* ############################## Toolbar ############################## */
+/* Ensure that the labels in the tabfolder gets updated
+   See Bug 552780
+*/
+TabFolder>*,
+CTabFolder>*,
+TabFolder>Composite>*,
+/* Composite > CommitSearchPage$... */
+CTabFolder>Composite>*,
+/* Composite > CommitSearchPage$... */
+TabFolder>Composite>*>* {
+    /* [style~='SWT.NO_BACKGROUND'] <- generate E4 non-sense bugs in apparently not related other rules Composite > ContentMergeViewer$... > TextMergeViewer$... */
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+/* Toolbar should inherit the colors of its container to avoid drawing artifacts*/
+ToolBar {
+    */ background-color: #343F3E;
+}
+
+ToolItem {
+    background-color: #343F3E;
+}
+
+Combo,
+List,
+Text,
+Spinner,
+CCombo {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+Composite>StyledText,
+Shell [style~='SWT.DROP_DOWN']>StyledText,
+/* for eg. folded code popup (but it's ignored) */
+SashForm>StyledText {
+    /*	Fix StyledText inside a SashForm */
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+Text[style~='SWT.SEARCH'],
+Text[style~='SWT.SEARCH']+Label
+
+/* SWT-BUG: adjacent sibling selector is ignored (CSS2.1) */
+    {
+    /* search boxes */
+    /*     background-color: #333;
+    color: #F4F7F7; */
+    background-color: #373E37;
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+Text[style~='SWT.READ_ONLY'] {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: #bbbbbb;
+}
+
+Shell Tree,
+Shell Table,
+Shell List {
+    background-color: #192020;
+}
+
+DatePicker,
+DatePicker>Text,
+ScheduleDatePicker,
+ScheduleDatePicker>Text {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+
+ScrolledFormText,
+FormText {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+Table,
+Tree,
+RegistryFilteredTree {
+    background-color: inherit;
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+Hyperlink,
+ImageHyperlink {
+    background-color: inherit;
+    color: #6fc5ee;
+}
+
+
+ViewerPane,
+DrillDownComposite {
+    background-color: #232323;
+    color: #CCC;
+}
+
+ProgressInfoItem,
+ProgressInfoItem>*,
+CompareViewerPane,
+CompareViewerPane>* {
+    background-color: inherit;
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+ProgressIndicator {
+    background-color: #777;
+    color: '#org-eclipse-ui-workbench-DARK_FOREGROUND';
+}
+
+DiscoveryItem,
+DiscoveryItem Label,
+DiscoveryItem Composite {
+    background-color: #383C3E;
+    color: #dddddd;
+}
+
+DiscoveryItem StyledText {
+    background-color: #383C3E;
+    color: #aaaaaa;
+}
+
+DiscoveryItem Link {
+    background-color: #383C3E;
+    color: #8B9498;
+}
+
+CatalogSwitcher,
+CatalogSwitcher>ScrolledComposite>Composite>Composite
+
+/* ignored because hard-coded */
+,
+CategoryItem {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: #dddddd;
+}
+
+GradientCanvas,
+GradientCanvas>Label {
+    background-color: #373E37;
+    color: #DDDDDD;
+}
+
+GradientCanvas {
+    /* SWT-BUG workaround: GradientCanvas background-color is ignored */
+    background: #373E37;
+}
+
+CategoryItem>GradientCanvas,
+CategoryItem>GradientCanvas>Label {
+    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+    background-color: #fafafa;
+    color: #333;
+}
+
+CategoryItem>GradientCanvas {
+    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+    background: #fafafa;
+    background-image: #333;
+}
+
+WebSite {
+    background-color: #41464A;
+    color: #dddddd;
+}
+
+Form,
+FormHeading {
+    background-color: #507154;
+    color: #DDDDDD;
+}
+
+Form {
+    /* Bug 465148: Additional styling for the Form */
+    text-background-color: #507154;
+
+    tb-toggle-hover-color: #192020;
+    tb-toggle-color: #192020;
+    h-hover-full-color: #192020;
+    h-hover-light-color: #192020;
+    h-bottom-keyline-2-color: #192020;
+    h-bottom-keyline-1-color: #192020;
+
+    /* We also have to force the background mode (the
+	 * Label/ToolBar in the heading should inherit it).
+	 */
+    swt-background-mode: 'force';
+}
+
+Section {
+    background-color: #2B382D;
+    color: #DDDDDD;
+    background-color-titlebar: #2B382D;
+    background-color-gradient-titlebar: #2B382D;
+    border-color-titlebar: #2B382D;
+    swt-titlebar-color: #DDDDDD;
+    tb-toggle-hover-color: #F4F7F7;
+    tb-toggle-color: #F4F7F7;
+}
+
+Table,
+Tree {
+    swt-header-color: #DDDDDD;
+    swt-header-background-color: #373E37;
+}
+
+Twistie {
+    color: #E8E4DF;
+}
+
+.MPartSashContainer {
+    background-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    color: #EEEEEE;
+}
+
+HeapStatus {
+    background-color: #2B382D;
+    color: #EEEEEE;
+}
+
+PageSiteComposite,
+PageSiteComposite>CImageLabel {
+    color: #EEEEEE;
+}
+
+PageSiteComposite>PropertyTable {
+    background-color: #333;
+    color: #EEEEEE;
+}
+
+PageSiteComposite>PropertyTable:disabled {
+    /* SWT-BUG: event is triggered but styles for PropertyTable are hard-coded */
+    background-color: #444;
+    color: #EEEEEE;
+}
+
+/* See Bug 430848: We need to override the theme of the Eclipse splash screen, because
+ * otherwise the splash screen would be partly switched to the dark theme during startup,
+ * which does not look very nice.
+ */
+Label#org-eclipse-ui-splash-progressText {
+    background-color: inherit;
+    /* transparent */
+    color: #9c9696;
+    /* see property startupForegroundColor in the product */
+}
+
+Label#org-eclipse-ui-buildid-text {
+    background-color: inherit;
+    /* transparent */
+}
+
+ProgressIndicator#org-eclipse-ui-splash-progressIndicator {
+    background-color: #e1e1e1;
+}
+
+Link {
+    swt-link-foreground-color: '#org-eclipse-ui-workbench-LINK_COLOR'
+}
+
+ExpandableComposite {
+    swt-titlebar-color: #DDDDDD;
+    tb-toggle-hover-color: #F4F7F7;
+    tb-toggle-color: #F4F7F7;
+}
+
+TabbedPropertyTitle>CLabel {
+    color: #DDDDDD;
+}
+
+TabbedPropertyTitle {
+    swt-backgroundGradientStart-color: #507154;
+    swt-backgroundGradientEnd-color: #507154;
+    swt-backgroundBottomKeyline1-color: #507154;
+    swt-backgroundBottomKeyline2-color: #507154;
+}
+
+TabbedPropertyList {
+    swt-tabNormalShadow-color: '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR';
+    /* color of shadow lines around the tabs */
+    swt-tabDarkShadow-color: '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR';
+    /* line color of the tiny scroll triangle (at top / at bottom) */
+    swt-tabAreaBackground-color: '#org-eclipse-ui-workbench-DARK_BACKGROUND';
+    /*same as canvas*/
+    swt-tabBackground-color: '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_START';
+    color: '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR';
+    /* text color in the tab / tab area */
+}
