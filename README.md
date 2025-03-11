@@ -55,6 +55,12 @@ In case You do not like the results, or You want to apply another style, then Yo
 
 ![1740825749087](image/README/1740825749087.png)
 
+## FAQ
+
+Question: I have updated Eclipse, my style is gone.
+
+Answer: Please apply the style again. Reason: Eclipse delivered a new version of the UI plugin.
+
 ## Styles
 
 ### Dark
