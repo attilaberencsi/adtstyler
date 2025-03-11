@@ -1,6 +1,7 @@
 - [ADT Styler](#adt-styler)
   - [Motivation](#motivation)
   - [Installation](#installation)
+  - [Update](#update)
   - [Change Log](#change-log)
   - [Usage](#usage)
     - [Applying color styles](#applying-color-styles)
@@ -9,14 +10,13 @@
   - [Styles](#styles)
     - [Dark](#dark)
   - [Submitting issues](#submitting-issues)
-    - [DON'TS](#donts)
+    - [DON&#39;TS](#donts)
     - [DOS](#dos)
   - [Shots and Test Results](#shots-and-test-results)
     - [Dark Styles](#dark-styles)
       - [sapdev](#sapdev)
   - [Known issues](#known-issues)
   - [License](#license)
-
 
 # ADT Styler
 
@@ -32,6 +32,8 @@ A command-line tool for ABAP Development Tool (ADT) styling. Patches the Dark an
 
 Prerequsite is [Node.js](https://nodejs.org/), Windows.
 
+Open **Command Prompt** and install the module:.
+
 ```bash
 npm install -g @sapdev.eu/adtstyler
 ```
@@ -41,6 +43,10 @@ npm install -g @sapdev.eu/adtstyler
 ```sql
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ```
+
+## Update
+
+Open **Command Prompt** and issue: `npm update -g @sapdev.eu/adtstyler`
 
 ## Change Log
 
