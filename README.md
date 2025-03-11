@@ -1,3 +1,23 @@
+- [ADT Styler](#adt-styler)
+  - [Motivation](#motivation)
+  - [Installation](#installation)
+  - [Change Log](#change-log)
+  - [Usage](#usage)
+    - [Applying color styles](#applying-color-styles)
+    - [Restoring your theme](#restoring-your-theme)
+  - [FAQ](#faq)
+  - [Styles](#styles)
+    - [Dark](#dark)
+  - [Submitting issues](#submitting-issues)
+    - [DON'TS](#donts)
+    - [DOS](#dos)
+  - [Shots and Test Results](#shots-and-test-results)
+    - [Dark Styles](#dark-styles)
+      - [sapdev](#sapdev)
+  - [Known issues](#known-issues)
+  - [License](#license)
+
+
 # ADT Styler
 
 A command-line tool for ABAP Development Tool (ADT) styling. Patches the Dark and Light theme of eclipse with the selected color style on Windows.
@@ -6,7 +26,7 @@ A command-line tool for ABAP Development Tool (ADT) styling. Patches the Dark an
 
 ## Motivation
 
-3rd party themes and plugins which inject themself into Eclipse caused unstability and slowdown. Plenty of error messages appear continously in the Eclipse log view using ADT. Things were even worse working on remote environments. Good we have few of such genric plugins, but there is a point were things start to be uncomfortable and unusable. This whole little project started with adjusting a single color within a single file, due the selection highlight wasn't really spottable in the eclipse project explorer using the dark theme. After this maniac little devil 🙉  appear and wanted more. Here we are 🙋. Things can be made better looking always. There is no end in Eclipse styling, even minor issues / side-effects acceptable, right ? 😅
+3rd party themes and plugins which inject themself into Eclipse caused unstability and slowdown. Plenty of error messages appear continously in the Eclipse log view using ADT. Things were even worse working on remote environments. Good we have few of such generic plugins, but there is a point were things start to be uncomfortable and unusable. This whole little project started with adjusting a single color within a single file, due the selection highlight wasn't really spottable in the eclipse project explorer using the dark theme. After this maniac little devil 🙉  appear and wanted more. Here we are 🙋. Things can be made better looking always. There is no end in Eclipse styling, even minor issues / side-effects acceptable, right ? 😅
 
 ## Installation
 
