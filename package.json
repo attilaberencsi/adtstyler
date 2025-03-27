@@ -1,6 +1,6 @@
 {
   "name": "@sapdev.eu/adtstyler",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": false,
   "description": "CLI tool for ADT styling",
   "type": "module",
