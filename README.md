@@ -85,7 +85,11 @@ In case You do not like the results, or You want to apply another style, then Yo
 
 Question: I have updated Eclipse, my style is gone.
 
-Answer: Please apply the style again. Reason: Eclipse delivered a new version of the UI plugin.
+Answer: Please apply the style again. Reason: Eclipse delivered a new version of the UI plugin. 
+
+Please choose a new backup folder other than the previous one, to backup the new files arrived with the update.
+
+You might need to update this tool as well with `npm update` see above. 
 
 ## Styles
 
